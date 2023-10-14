@@ -21,3 +21,5 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+flatContract.txt
+log/ganache-20230930-171511.log

@@ -1,15 +1,10 @@
 import faceIO from '@faceio/fiojs'
 
-const faceio = new faceIO('fioa90ff');
-
+const faceio = new faceIO('fioa4299');
 
   function enrollNewUser(){
     faceio.enroll({
-      "locale": "auto",
-      "payload": {
-          "whoami": 123456,
-          "email": "john.doe@example.com"
-          }
+      "locale": "auto"
       }).then(userInfo => {
           alert(
               `User Successfully Enrolled! Details:
@@ -30,7 +25,8 @@ async function authenticateUser(){
   }).then(userData => {
       console.log("Success, user identified")
       console.log("Linked facial Id: " + userData.facialId)
-      console.log("Payload: " + JSON.stringify(userData.payload)) 
+      console.log("Payload: " + JSON.stringify(userData.payload))
+      return userData;
   }).catch(errCode => {
       handleError(errCode)
   })
