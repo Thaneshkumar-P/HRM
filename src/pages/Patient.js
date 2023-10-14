@@ -1,8 +1,13 @@
+import Web3 from "web3";
+import { nanoid } from "nanoid";
+
 
 const Patient = () => {
+
+
     return (
         <>
-            <h1>Hello World</h1>
+            <h6>Hey, Patient</h6>
         </>
     )
 }
